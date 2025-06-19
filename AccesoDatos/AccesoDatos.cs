@@ -16,7 +16,7 @@ namespace Datos
         public SqlDataReader Lector { get; }
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server= .\\SQLEXPRESS; Database=Catalogo_P3_DB; integrated security = true;");
+            conexion = new SqlConnection("server= .\\SQLEXPRESS; Database=PELUQUERIA_DB; integrated security = true;");
         }
 
         public void setearConsulta(string consulta)
