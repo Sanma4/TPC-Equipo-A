@@ -11,6 +11,6 @@ namespace Dominio
         public int Id { get; set; }
         public string Descripcion { get; set; }
         public float Precio { get; set; }
-        public DateTime DuracionEstimada { get; set; }
+        public string DuracionEstimada { get; set; }
     }
 }
