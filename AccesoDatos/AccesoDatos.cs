@@ -13,16 +13,29 @@ namespace Datos
         private SqlCommand comando;
         private SqlDataReader lector;
 
-        public SqlDataReader Lector { get; }
+        public SqlDataReader Lector 
+        {
+            get { return lector; }
+        }
         public AccesoDatos()
         {
             conexion = new SqlConnection("server= .\\SQLEXPRESS; Database=PELUQUERIA_DB; integrated security = true;");
+            comando = new SqlCommand();
         }
 
         public void setearConsulta(string consulta)
         {
-            comando.CommandType = System.Data.CommandType.Text;
-            comando.CommandText = consulta;
+            try
+            {
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = consulta;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
         }
         public void setearParametro(string nombre, object valor)
         {
