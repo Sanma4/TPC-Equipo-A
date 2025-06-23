@@ -74,5 +74,32 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+
+        public void Editar(Cliente cliente)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Update Cliente set Nombre = @nombre, Apellido = @apellido, Email = @email, Telefono = @tlf, Sexo = @sexo, Activo = @activo where Id = @id");
+                datos.setearParametro("@nombre", cliente.Nombre);
+                datos.setearParametro("@apellido", cliente.Apellido);
+                datos.setearParametro("@email", cliente.Email);
+                datos.setearParametro("@tlf", cliente.Telefono);
+                datos.setearParametro("@sexo", cliente.Sexo);
+                datos.setearParametro("@activo", cliente.Activo);
+                datos.setearParametro("@Id", cliente.Id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }
