@@ -35,8 +35,8 @@
             <div class="mb-3">
                 <label for="txtActivo" class="form-label">Activo</label>
                 <asp:DropDownList ID="ddlActivo" CssClass="form-control" runat="server">
-                    <asp:ListItem>Si</asp:ListItem>
-                    <asp:ListItem>No</asp:ListItem>
+                    <asp:ListItem Text="Si" Value="Si"></asp:ListItem>
+                    <asp:ListItem Text="No" Value="No"></asp:ListItem>
                 </asp:DropDownList>
             </div>
         </div>

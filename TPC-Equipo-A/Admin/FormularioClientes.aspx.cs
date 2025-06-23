@@ -53,6 +53,7 @@ namespace TPC_Equipo_A.Admin
 
                 if (Request.QueryString["id"] != null)
                 {
+                    nuevo.Id = int.Parse(txtId.Text);
                     negocio.Editar(nuevo);
                 }
                 else
