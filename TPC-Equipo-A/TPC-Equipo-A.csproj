@@ -99,6 +99,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\FormularioClientes.aspx" />
     <Content Include="Admin\ListaProductos.aspx" />
     <Content Include="Admin\ListaTratamientos.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -187,6 +188,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\FormularioClientes.aspx.cs">
+      <DependentUpon>FormularioClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FormularioClientes.aspx.designer.cs">
+      <DependentUpon>FormularioClientes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ListaProductos.aspx.cs">
       <DependentUpon>ListaProductos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
