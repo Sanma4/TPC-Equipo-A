@@ -2,8 +2,14 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <style>
+        .ocultar {
+            display: none;
+        }
+    </style>
     <div class="row">
         <div class="col-md-4 offset-md-2">
+            <asp:TextBox ID="txtId" CssClass="ocultar" runat="server"></asp:TextBox>
             <div class="mb-3">
                 <label for="txtNombre" class="form-label">Nombre</label>
                 <asp:TextBox ID="txtNombre" CssClass="form-control" runat="server"></asp:TextBox>

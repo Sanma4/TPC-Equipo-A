@@ -12,13 +12,15 @@ namespace Negocio
     {
 
 
-        public List<Cliente> ListarClientes()
+        public List<Cliente> ListarClientes(string id = "")
         {
             List<Cliente> lista = new List<Cliente>();
             AccesoDatos datos = new AccesoDatos();
             try
             {
                 datos.setearConsulta("Select id, nombre, apellido, email, telefono, sexo, activo from Cliente");
+                if (id != "")
+                    datos.setearConsulta("Select id, nombre, apellido, email, telefono, sexo, activo from Cliente where id = " + id);
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
