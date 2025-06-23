@@ -60,13 +60,13 @@ namespace TPC_Equipo_A.Admin
         protected global::System.Web.UI.WebControls.TextBox txtSexo;
 
         /// <summary>
-        /// Control txtActivo.
+        /// Control ddlActivo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList txtActivo;
+        protected global::System.Web.UI.WebControls.DropDownList ddlActivo;
 
         /// <summary>
         /// Control btnAceptar.

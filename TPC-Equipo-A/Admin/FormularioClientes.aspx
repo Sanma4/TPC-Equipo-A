@@ -28,10 +28,13 @@
             </div>
             <div class="mb-3">
                 <label for="txtActivo" class="form-label">Activo</label>
-                <asp:DropDownList ID="txtActivo" CssClass="form-control" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="ddlActivo" CssClass="form-control" runat="server">
+                    <asp:ListItem>Si</asp:ListItem>
+                    <asp:ListItem>No</asp:ListItem>
+                </asp:DropDownList>
             </div>
         </div>
     </div>
-    <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CssClass="btn btn-dark" />
+    <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CssClass="btn btn-dark" OnClick="btnAceptar_Click" />
     <a href="ListaClientes.aspx" class="btn btn-primary">Volver</a>
 </asp:Content>

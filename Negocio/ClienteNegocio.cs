@@ -10,6 +10,8 @@ namespace Negocio
 {
     public class ClienteNegocio
     {
+
+
         public List<Cliente> ListarClientes()
         {
             List<Cliente> lista = new List<Cliente>();
@@ -36,6 +38,31 @@ namespace Negocio
                 }
 
                 return lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void Agregar(Cliente cliente)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Insert into Cliente values(@nombre, @apellido, @email, @tlf, @sexo, @activo)");
+                datos.setearParametro("@nombre", cliente.Nombre);
+                datos.setearParametro("@apellido", cliente.Apellido);
+                datos.setearParametro("@email", cliente.Email);
+                datos.setearParametro("@tlf", cliente.Telefono);
+                datos.setearParametro("@sexo", cliente.Sexo);
+                datos.setearParametro("@activo", cliente.Activo);
+                datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
