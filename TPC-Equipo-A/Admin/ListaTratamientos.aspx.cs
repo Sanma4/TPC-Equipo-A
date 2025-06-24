@@ -24,7 +24,7 @@ namespace TPC_Equipo_A.Admin
         protected void dgvTratamientos_SelectedIndexChanged(object sender, EventArgs e)
         {
             string id = dgvTratamientos.SelectedDataKey.Value.ToString();
-            Response.Redirect("ListaTratamientos.aspx?id=" + id, false);
+            Response.Redirect("FormularioTratamientos.aspx?id=" + id, false);
         }
     }
 }

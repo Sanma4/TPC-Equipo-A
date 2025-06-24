@@ -74,7 +74,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("UPDATE Tratamiento SET descripcion = @descripcion, precio = @precio, duracionestimada = @duracionestimada WHERE id = @id");
+                datos.setearConsulta("UPDATE Tratamiento SET descripcion = @descripcion, precio = @precio, duracion = @duracionestimada WHERE id = @id");
                 datos.setearParametro("@id", nuevo.Id);
                 datos.setearParametro("@descripcion", nuevo.Descripcion);
                 datos.setearParametro("@precio", nuevo.Precio);
