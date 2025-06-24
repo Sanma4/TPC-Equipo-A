@@ -14,5 +14,8 @@ namespace Dominio
         public string Contraseña { get; set; }
         public bool Admin { get; set; }
         public bool Empleado { get; set; }
+
+        //Cambiar perfiles con un Enum
+
     }
 }

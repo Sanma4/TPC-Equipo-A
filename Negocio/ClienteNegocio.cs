@@ -27,12 +27,12 @@ namespace Negocio
                 {
                     Cliente cliente = new Cliente();
                     cliente.Id = (int)datos.Lector["id"];
-                    if (!((string)datos.Lector["nombre"] is DBNull))
-                        cliente.Nombre = (string)datos.Lector["nombre"];
-                    if (!((string)datos.Lector["apellido"] is DBNull))
-                        cliente.Apellido = (string)datos.Lector["apellido"];
+                    cliente.Nombre = (string)datos.Lector["nombre"];
+                    cliente.Apellido = (string)datos.Lector["apellido"];
                     cliente.Email = (string)datos.Lector["email"];
-                    cliente.Telefono = (string)datos.Lector["telefono"];
+                    if (!((string)datos.Lector["telefono"] is DBNull))
+                        cliente.Telefono = (string)datos.Lector["telefono"];
+
                     cliente.Sexo = (string)datos.Lector["sexo"];
                     cliente.Activo = (bool)datos.Lector["activo"];
 
