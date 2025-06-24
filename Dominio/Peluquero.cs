@@ -10,6 +10,7 @@ namespace Dominio
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
+        public string Apellido { get; set; }
         public List<Turno> Turno { get; set; }
         public List<Horario> Horario { get; set; }
         public string Email { get; set; }

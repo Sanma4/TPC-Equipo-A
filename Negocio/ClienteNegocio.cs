@@ -18,7 +18,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("Select id, nombre, apellido, email, telefono, sexo, activo from Cliente");
+                datos.setearConsulta("select id,nombre,apellido,urlImgPerfil,email,telefono from Peluquero");
                 if (id != "")
                     datos.setearConsulta("Select id, nombre, apellido, email, telefono, sexo, activo from Cliente where id = " + id);
                 datos.ejecutarLectura();
