@@ -18,7 +18,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("select id,nombre,apellido,urlImgPerfil,email,telefono from Peluquero");
+                datos.setearConsulta("select id,nombre,apellido,email,telefono, sexo, activo from Cliente");
                 if (id != "")
                     datos.setearConsulta("Select id, nombre, apellido, email, telefono, sexo, activo from Cliente where id = " + id);
                 datos.ejecutarLectura();
@@ -32,7 +32,6 @@ namespace Negocio
                     cliente.Email = (string)datos.Lector["email"];
                     if (!((string)datos.Lector["telefono"] is DBNull))
                         cliente.Telefono = (string)datos.Lector["telefono"];
-
                     cliente.Sexo = (string)datos.Lector["sexo"];
                     cliente.Activo = (bool)datos.Lector["activo"];
 
