@@ -103,6 +103,7 @@
     <Content Include="Admin\FormularioTratamientos.aspx" />
     <Content Include="Admin\ListaProductos.aspx" />
     <Content Include="Admin\ListaTratamientos.aspx" />
+    <Content Include="Admin\ListaTurnos.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -216,6 +217,13 @@
     </Compile>
     <Compile Include="Admin\ListaTratamientos.aspx.designer.cs">
       <DependentUpon>ListaTratamientos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ListaTurnos.aspx.cs">
+      <DependentUpon>ListaTurnos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ListaTurnos.aspx.designer.cs">
+      <DependentUpon>ListaTurnos.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
