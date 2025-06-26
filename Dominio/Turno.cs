@@ -9,7 +9,7 @@ namespace Dominio
     public class Turno
     {
         public int Id { get; set; }
-        public DateTime Dias { get; set; }
+        public Peluquero Peluquero { get; set; }
         public DateTime HoraInicio { get; set; }
         public DateTime HoraFin { get; set; }
         public Cliente Cliente  { get; set; }
