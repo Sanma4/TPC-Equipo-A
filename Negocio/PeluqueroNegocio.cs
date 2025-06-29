@@ -57,6 +57,57 @@ namespace Negocio
             }
         }
 
+        public void Agregar(Peluquero peluquero)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Insert into Peluqueros values(@nombre, @apellido, @email, @tlf, @sexo, @activo)");
+                datos.setearParametro("@nombre", peluquero.Nombre);
+                datos.setearParametro("@apellido", peluquero.Apellido);
+                datos.setearParametro("@email", peluquero.Email);
+                datos.setearParametro("@tlf", peluquero.Telefono);
+                datos.setearParametro("@sexo", peluquero.Sexo);
+                datos.setearParametro("@activo", peluquero.Activo);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void Editar(Peluquero peluquero)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Update Peluqueros set Nombre = @nombre, Apellido = @apellido, Email = @email, Telefono = @tlf, Sexo = @sexo, Activo = @activo where Id = @id");
+                datos.setearParametro("@nombre", peluquero.Nombre);
+                datos.setearParametro("@apellido", peluquero.Apellido);
+                datos.setearParametro("@email", peluquero.Email);
+                datos.setearParametro("@tlf", peluquero.Telefono);
+                datos.setearParametro("@sexo", peluquero.Sexo);
+                datos.setearParametro("@activo", peluquero.Activo);
+                datos.setearParametro("@Id", peluquero.Id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
 
     }
 }
