@@ -11,7 +11,16 @@ namespace TPC_Equipo_A.Admin
 {
 
 
-    public partial class ListaProductos
+    public partial class ListaTurnos
     {
+
+        /// <summary>
+        /// Control dgvTurnos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView dgvTurnos;
     }
 }

@@ -21,10 +21,8 @@ namespace Negocio
 
                 datos.setearConsulta("select id,nombre,apellido,email,telefono,sexo,activo from Peluquero");
                 if (id != "")
-                {
                     datos.setearConsulta("Select id, descripcion, precio, duracion from Tratamiento where id = " + id);
-                }
-
+                
                 datos.ejecutarLectura();
 
 
