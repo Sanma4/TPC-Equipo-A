@@ -100,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\FormularioClientes.aspx" />
+    <Content Include="Admin\FormularioPeluqueros.aspx" />
     <Content Include="Admin\FormularioTratamientos.aspx" />
     <Content Include="Admin\ListaProductos.aspx" />
     <Content Include="Admin\ListaTratamientos.aspx" />
@@ -196,6 +197,13 @@
     </Compile>
     <Compile Include="Admin\FormularioClientes.aspx.designer.cs">
       <DependentUpon>FormularioClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormularioPeluqueros.aspx.cs">
+      <DependentUpon>FormularioPeluqueros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FormularioPeluqueros.aspx.designer.cs">
+      <DependentUpon>FormularioPeluqueros.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\FormularioTratamientos.aspx.cs">
       <DependentUpon>FormularioTratamientos.aspx</DependentUpon>
