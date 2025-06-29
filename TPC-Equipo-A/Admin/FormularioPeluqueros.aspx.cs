@@ -13,7 +13,23 @@ namespace TPC_Equipo_A.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                string id = Request.QueryString["id"] != null ? Request.QueryString["id"].ToString() : "";
 
+                if (id != "")
+                {
+                    PeluqueroNegocio negocio = new PeluqueroNegocio();
+                    Peluquero seleccionado = (negocio.ListarPeluqueros(id))[0];
+                    txtId.Text = seleccionado.Id.ToString();
+                    txtNombre.Text = seleccionado.Nombre;
+                    txtApellido.Text = seleccionado.Apellido;
+                    txtTlf.Text = seleccionado.Telefono;
+                    txtEmail.Text = seleccionado.Email;
+                    txtSexo.Text = seleccionado.Sexo;
+                    ddlActivo.SelectedValue = seleccionado.Activo ? "Si" : "No";
+                }
+            }
         }
 
         protected void btnAceptar_Click(object sender, EventArgs e)
