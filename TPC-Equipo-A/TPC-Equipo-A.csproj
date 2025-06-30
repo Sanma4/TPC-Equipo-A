@@ -102,6 +102,7 @@
     <Content Include="Admin\FormularioClientes.aspx" />
     <Content Include="Admin\FormularioPeluqueros.aspx" />
     <Content Include="Admin\FormularioTratamientos.aspx" />
+    <Content Include="Admin\ListaHorarios.aspx" />
     <Content Include="Admin\ListaProductos.aspx" />
     <Content Include="Admin\ListaTratamientos.aspx" />
     <Content Include="Admin\ListaTurnos.aspx" />
@@ -211,6 +212,13 @@
     </Compile>
     <Compile Include="Admin\FormularioTratamientos.aspx.designer.cs">
       <DependentUpon>FormularioTratamientos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ListaHorarios.aspx.cs">
+      <DependentUpon>ListaHorarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ListaHorarios.aspx.designer.cs">
+      <DependentUpon>ListaHorarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ListaProductos.aspx.cs">
       <DependentUpon>ListaProductos.aspx</DependentUpon>
