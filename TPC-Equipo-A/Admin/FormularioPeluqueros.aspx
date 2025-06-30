@@ -8,7 +8,8 @@
     }
 </style>
 <div class="row">
-    <div class="col-md-4 offset-md-2">
+    <h2 class="text-center">Crear nuevo peluquero</h2>
+    <div class="col-md-4 offset-md-3">
         <asp:TextBox ID="txtId" CssClass="ocultar" runat="server"></asp:TextBox>
         <div class="mb-3">
             <label for="txtNombre" class="form-label">Nombre</label>
@@ -23,7 +24,7 @@
             <asp:TextBox ID="txtEmail" CssClass="form-control" runat="server"></asp:TextBox>
         </div>
     </div>
-    <div class="col-md-4 ">
+    <div class="col-md-4 offset-md-3">
         <div class="mb-3">
             <label for="txtTlf" class="form-label">Teléfono</label>
             <asp:TextBox ID="txtTlf" CssClass="form-control" runat="server"></asp:TextBox>
@@ -41,7 +42,7 @@
         </div>
     </div>
 </div>
-<div class="col-md-4 offset-md-2 mt-3">
+<div class="col-md-4 offset-md-3 mt-3">
     <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CssClass="btn btn-success" OnClick="btnAceptar_Click" />
     <a href="ListaPeluqueros.aspx" class="btn btn-dark">Volver</a>
 </div>
