@@ -25,7 +25,7 @@
     </div>
     <div class="col-md-4 offset-md-2 mt-3">
         <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CssClass="btn btn-success" OnClick="btnAceptar_Click" />
-        <a href="ListaClientes.aspx" class="btn btn-dark">Volver</a>
+        <a href="ListaClientes.aspx" class="btn btn-primary">Volver</a>
     </div>
 
 </asp:Content>

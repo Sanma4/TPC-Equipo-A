@@ -17,5 +17,5 @@
             <asp:CommandField ShowSelectButton="True" SelectText="Editar" HeaderText="Acciones" />
         </Columns>
     </asp:GridView>
-    <a href="FormularioClientes.aspx" class="btn btn-dark">Agregar Cliente</a>
+    <a href="FormularioClientes.aspx" class="btn btn-primary">Agregar Cliente</a>
 </asp:Content>
