@@ -10,21 +10,27 @@ namespace Negocio
 {
     public class HorarioNegocio
     {
-        public List<Horario> ListarHorarios()
+        public List<Horario> ListarHorarios(string id = "")
         {
             List<Horario> lista = new List<Horario>();
             AccesoDatos datos = new AccesoDatos();
             try
             {
                 datos.setearConsulta("SELECT id, dia, horaEntrada, horaSalida FROM Horario");
+                if (id != "")
+                    datos.setearConsulta("SELECT id, dia, horaEntrada, horaSalida FROM Horario where id = " + id);
+
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
                     Horario aux = new Horario();
                     aux.Id = (int)datos.Lector["id"];
                     aux.Dia = (string)datos.Lector["dia"];
-                    aux.HoraEntrada = (DateTime)datos.Lector["horaEntrada"];
-                    aux.HoraSalida = (DateTime)datos.Lector["horaSalida"];
+                    if (!(datos.Lector["horaEntrada"] is DBNull))
+                        aux.HoraEntrada = (string)datos.Lector["horaEntrada"];
+                    if (!(datos.Lector["horaSalida"] is DBNull))
+                        aux.HoraSalida = (string)datos.Lector["horaSalida"];
+
                     lista.Add(aux);
                 }
                 return lista;
@@ -44,7 +50,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("Insert into Horario values(@horaEntrada, @horaSalida, @dia)");
+                datos.setearConsulta("Insert into Horario(Dia, HoraEntrada, HoraSalida) values(@dia, @horaEntrada, @horaSalida)");
                 datos.setearParametro("@dia", horario.Dia);
                 datos.setearParametro("@horaEntrada", horario.HoraEntrada);
                 datos.setearParametro("@horaSalida", horario.HoraSalida);
@@ -71,6 +77,26 @@ namespace Negocio
                 datos.setearParametro("@dia", horario.Dia);
                 datos.setearParametro("@horaEntrada", horario.HoraEntrada);
                 datos.setearParametro("@horaSalida", horario.HoraSalida);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void Eliminar(int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Delete from Horario where Id = @id");
+                datos.setearParametro("@id", id);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

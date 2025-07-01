@@ -10,7 +10,7 @@ namespace Dominio
     {
         public int Id { get; set; }
         public string Dia { get; set; }
-        public DateTime HoraEntrada { get; set; }
-        public DateTime HoraSalida { get; set; }
+        public string HoraEntrada { get; set; }
+        public string HoraSalida { get; set; }
     }
 }
